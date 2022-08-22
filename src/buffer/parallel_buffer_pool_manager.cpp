@@ -24,6 +24,7 @@ ParallelBufferPoolManager::~ParallelBufferPoolManager() = default;
 
 auto ParallelBufferPoolManager::GetPoolSize() -> size_t {
   // Get size of all BufferPoolManagerInstances
+
   return 0;
 }
 
@@ -54,6 +55,7 @@ auto ParallelBufferPoolManager::NewPgImp(page_id_t *page_id) -> Page * {
   // starting index and return nullptr
   // 2.   Bump the starting index (mod number of instances) to start search at a different BPMI each time this function
   // is called
+
   return nullptr;
 }
 

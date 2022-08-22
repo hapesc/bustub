@@ -23,7 +23,7 @@ The following instructions are adapted from the Github documentation on [duplica
    
    # If you pull / push over HTTPS
    $ git push --mirror https://github.com/student/bustub-private.git
-
+   
    # If you pull / push over SSH
    $ git push --mirror git@github.com:student/bustub-private.git
    ```
@@ -36,7 +36,7 @@ The following instructions are adapted from the Github documentation on [duplica
    ```
    # If you pull / push over HTTPS
    $ git clone https://github.com/student/bustub-private.git
-
+   
    # If you pull / push over SSH
    $ git clone git@github.com:student/bustub-private.git
    ```
