@@ -17,6 +17,7 @@
 #include "gtest/gtest.h"
 #include "primer/p0_starter.h"
 
+
 namespace bustub {
 
 /**
@@ -39,6 +40,7 @@ static auto ThrowsBustubException(const std::function<void()> &function, Excepti
 TEST(StarterTest, SampleTest) {
   int a = 1;
   EXPECT_EQ(1, a);
+
 }
 
 /** Test that matrix initialization works as expected */
@@ -66,6 +68,7 @@ TEST(StarterTest, InitializationTest) {
       EXPECT_EQ(expected, matrix->GetElement(i, j));
     }
   }
+
 }
 
 TEST(StarterTest, ElementAccessTest) {

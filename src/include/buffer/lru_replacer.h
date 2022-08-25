@@ -14,11 +14,12 @@
 
 #include <list>
 #include <mutex>  // NOLINT
+#include <shared_mutex>
+#include <unordered_map>
 #include <vector>
-
 #include "buffer/replacer.h"
 #include "common/config.h"
-
+#include "include/common/logger.h"
 namespace bustub {
 
 /**
@@ -45,8 +46,15 @@ class LRUReplacer : public Replacer {
 
   auto Size() -> size_t override;
 
+  using ReadLock = std::shared_lock<std::shared_mutex>;
+  using WriteLock = std::lock_guard<std::shared_mutex>;
+
  private:
-  // TODO(student): implement me!
+  size_t max_pages_;
+
+  mutable std::shared_mutex mutex_;
+  std::list<frame_id_t> replacer_;
+  std::unordered_map<frame_id_t, std::list<frame_id_t>::iterator> map_;
 };
 
 }  // namespace bustub
